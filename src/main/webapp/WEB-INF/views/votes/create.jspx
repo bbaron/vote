@@ -4,8 +4,8 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_springsource_vote_domain_Vote" modelAttribute="vote" path="/votes" render="${empty dependencies}" z="cp7QhDVcwkcDElkWoaQt0uDvxyQ=">
         <field:select field="choice" id="c_com_springsource_vote_domain_Vote_choice" itemValue="id" items="${choices}" path="/choices" z="allb6E2L1ycNLovXrLurVPz/3gY="/>
-        <field:input field="ip" id="c_com_springsource_vote_domain_Vote_ip" required="true" z="8/4ShAYvfsAlZlEhWbxxTKcr6PU="/>
-        <field:datetime dateTimePattern="${vote_registered_date_format}" field="registered" id="c_com_springsource_vote_domain_Vote_registered" past="true" required="true" z="D/KOZsV5IDLsjUQJsPtmNdE4CAk="/>
+        <field:input field="ip" id="c_com_springsource_vote_domain_Vote_ip" required="true" z="8/4ShAYvfsAlZlEhWbxxTKcr6PU=" render="false"/>
+        <field:datetime dateTimePattern="${vote_registered_date_format}" field="registered" id="c_com_springsource_vote_domain_Vote_registered" past="true" required="true" z="D/KOZsV5IDLsjUQJsPtmNdE4CAk=" render="false"/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_springsource_vote_domain_Vote" render="${not empty dependencies}" z="fW9YmZFVX0leCJ3lyFVQWilR7yM="/>
 </div>

@@ -49,12 +49,7 @@ privileged aspect Vote_Roo_Entity {
         this.version = version;
     }
     
-    @Transactional
-    public void Vote.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
+        
     @Transactional
     public void Vote.remove() {
         if (this.entityManager == null) this.entityManager = entityManager();

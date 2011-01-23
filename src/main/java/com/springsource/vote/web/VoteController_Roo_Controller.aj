@@ -26,17 +26,7 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect VoteController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST)
-    public String VoteController.create(@Valid Vote vote, BindingResult result, Model model, HttpServletRequest request) {
-        if (result.hasErrors()) {
-            model.addAttribute("vote", vote);
-            addDateTimeFormatPatterns(model);
-            return "votes/create";
-        }
-        vote.persist();
-        return "redirect:/votes/" + encodeUrlPathSegment(vote.getId().toString(), request);
-    }
-    
+        
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String VoteController.createForm(Model model) {
         model.addAttribute("vote", new Vote());
